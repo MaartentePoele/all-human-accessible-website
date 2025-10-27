@@ -25,6 +25,10 @@ html {
   display: none;
 }
 
+.active {
+  text-decoration: underline;
+}
+
 body {
   margin: 0;
   padding: 0;
