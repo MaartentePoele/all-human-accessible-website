@@ -12,19 +12,22 @@ html {
   --gras: rgb(106, 164, 38); /* Gras */
   --roze: rgb(249, 193, 157); /* Kauwgom */
   --grijs: rgb(188, 181, 172); /* Steen */
+
+  scrollbar-gutter: stable; /* Maakt ruimte voor scroll bar op alle pagina's */
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  font-family: Arial;
+/* Selecteerd alles */
+* {
+  box-sizing: border-box; /* Neemt de padding en border mee in de afmetingen van elementen */
+  font-family: Arial; /* Font */
 }
 
+/* Om elementen te verbergen */
 .visually-hidden {
   display: none;
 }
 
+/* Om duidelijk te maken op welke buurtpagina je zit */
 .active {
   text-decoration: underline;
 }
@@ -32,7 +35,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.4;
+  line-height: 1.4; /* Algemene ruimte tussen teksten voor betere leesbaarheid */
 }
 
 .home-header {
@@ -59,6 +62,7 @@ body {
   }
 }
 
+/* Header volgens de hoofdkleur */
 .header-nieuw-west-hoofdkleur {
   background-color: var(--groen);
 
@@ -67,6 +71,7 @@ body {
   }
 }
 
+/* Alternative header om aan de opdrachtgever te laten zien */
 .header-nieuw-west-betere-kleur {
   background-color: var(--donkergroen);
 
@@ -75,6 +80,7 @@ body {
   }
 }
 
+/* OPMAAK HEADER */
 header {
   display: flex;
   flex-wrap: wrap;
@@ -121,6 +127,7 @@ header {
   }
 }
 
+/* Zet de container in het midden */
 main {
   display: flex;
   justify-content: center;
@@ -132,14 +139,14 @@ main {
   gap: 2rem;
   padding-top: 2rem;
 
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* Op mobiel 1 colom */
 
   @media (min-width: 678px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Op tablet 2 colommen */
   }
 
   @media (min-width: 1100px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* Op desktop 3 colommen */
   }
 }
 
@@ -151,14 +158,15 @@ main {
   }
 }
 
+/* Zorgt voor de zoom van de image als je over hovert */
 .image-container {
   overflow: hidden;
-  max-height: 300px;
 
   img {
     width: 100%;
     object-fit: cover;
     transition: all 0.5s ease;
+    display: block;
   }
 
   img:hover {
@@ -184,6 +192,7 @@ main {
   text-decoration-color: var(--donkerblauw);
 }
 
+/* Zet de nieuws header op de goede plek voor elke grid-layout */
 h2 {
   font-size: 1.5rem;
   color: var(--donkerblauw);
