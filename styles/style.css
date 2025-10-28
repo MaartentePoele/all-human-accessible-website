@@ -44,7 +44,7 @@ body {
 }
 
 .header-zuidoost {
-  background-color: var(--donkergroen);
+  background-color: var(--zeegroen);
 
   a {
     color: white;
@@ -59,7 +59,7 @@ body {
   }
 }
 
-.header-nieuw-west {
+.header-nieuw-west-hoofdkleur {
   background-color: var(--groen);
 
   a {
@@ -67,31 +67,55 @@ body {
   }
 }
 
+.header-nieuw-west-betere-kleur {
+  background-color: var(--donkergroen);
+
+  a {
+    color: white;
+  }
+}
+
 header {
-  padding-left: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.25rem;
+
+  h1 a {
+    font-size: 2.25rem;
+    text-decoration: none;
+  }
 
   nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    h1 a {
-      font-size: 2.25rem;
-      text-decoration: none;
-    }
+    flex-grow: 1;
 
     ul {
       display: flex;
-      justify-content: space-around;
-      flex-grow: 1;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+
+      margin: 0;
+      padding: 0;
+      padding-left: 16px;
+
       list-style-type: none;
 
       li a {
+        display: block;
+        text-align: center;
+
         font-size: 1.5rem;
         color: var(--donkerblauw);
         text-decoration: none;
+
         font-weight: bold;
-        padding: 0 1rem 0 1rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -100,6 +124,7 @@ header {
 main {
   display: flex;
   justify-content: center;
+  padding-bottom: 2rem;
 }
 
 .article-container {
@@ -126,12 +151,9 @@ main {
   }
 }
 
-.article:last-of-type {
-  margin-bottom: 2rem;
-}
-
 .image-container {
   overflow: hidden;
+  max-height: 300px;
 
   img {
     width: 100%;
@@ -157,7 +179,20 @@ main {
   text-decoration: underline;
 }
 
-.article:hover {
+.preview-article-title:hover {
   text-decoration: underline;
   text-decoration-color: var(--donkerblauw);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--donkerblauw);
+
+  @media (min-width: 678px) {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  @media (min-width: 1100px) {
+    grid-area: 1 / 1 / 2 / 4;
+  }
 }
