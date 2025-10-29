@@ -22,11 +22,6 @@ html {
   font-family: Arial; /* Font */
 }
 
-/* Om elementen te verbergen */
-.visually-hidden {
-  display: none;
-}
-
 /* Om duidelijk te maken op welke buurtpagina je zit */
 .active {
   text-decoration: underline;
@@ -178,13 +173,6 @@ main {
   font-size: 1rem;
   color: var(--donkerblauw);
   margin: 0;
-}
-
-.lees-meer {
-  color: var(--oranje);
-  margin: 0;
-  font-size: 0.8rem;
-  text-decoration: underline;
 }
 
 .preview-article-title:hover {
