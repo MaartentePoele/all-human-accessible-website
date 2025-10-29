@@ -95,7 +95,7 @@ header {
     ul {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: clamp(1.5rem, 5vw, 8rem);
       justify-content: center;
 
       margin: 0;
